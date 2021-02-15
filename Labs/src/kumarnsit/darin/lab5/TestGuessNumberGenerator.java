@@ -1,7 +1,16 @@
 package kumarnsit.darin.lab5;
+/*
+ * TestGuessNumberGenerator which includes the main method to calls another method for test.
+ *
+ * Author: Darin Kumarnsit
+ * ID: 623040249-6
+ * Sec: 2
+ * Date: February 12, 2021
+ *
+ */
+public class TestGuessNumberGenerator{
 
-public class TestGuessNumberGenerator extends GuessNumberGameVer1 {
-
+    //method to test GuessNumberGameVer1 class
     public static void testConstructors() {
         GuessNumberGameVer1 gng1 = new GuessNumberGameVer1();
         GuessNumberGameVer1 gng2 = new GuessNumberGameVer1(5, 10);
@@ -14,6 +23,7 @@ public class TestGuessNumberGenerator extends GuessNumberGameVer1 {
         gng3.playGame();
     }
 
+    //method to test GuessNumberGameVer1 class
     public static void testSetterGetterMethods() {
         GuessNumberGameVer1 gng = new GuessNumberGameVer1();
         System.out.println("The first guess number game is");
@@ -33,20 +43,22 @@ public class TestGuessNumberGenerator extends GuessNumberGameVer1 {
                 ", and max tries is " + gng.getMaxTries());
     }
 
+    //method to test GuessNumberGameVer2 class
     public static void testPlayGames() {
         GuessNumberGameVer2 gng = new GuessNumberGameVer2(5, 10, 4);
         gng.playGames();
     }
 
+    //method to test GuessNumberGameVer3 class
     public static void testPlayGamesVer3() {
         GuessNumberGameVer3 gng = new GuessNumberGameVer3(5, 10, 4);
         gng.playGames();
     }
 
     public static void main(String[] args) {
-        //testConstructors();
-        //testSetterGetterMethods();
-        //testPlayGames();
+        testConstructors();
+        testSetterGetterMethods();
+        testPlayGames();
         testPlayGamesVer3();
     }
 }

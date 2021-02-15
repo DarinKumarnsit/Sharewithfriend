@@ -1,23 +1,42 @@
 package kumarnsit.darin.lab5;
-
+/*
+ * GuessNumberGameVer2 inherited from GuessNumberGameVer1 Create a protected variable called guesses and numGuesses
+ * Create three constructors of GuessNumberGameVer2 that accepts no parameter, two integers,
+ * and three integers that call the constructors of the superclass (GuessNumberGameVer1)
+ * for the array guesses by assuming that there can be at most 20 guesses. declare the constant variable MAX_GUESSES as 20.
+ * @override to override the method playGame()
+ * Define these three new methods which are showSpecific() showGuesses() playGames()
+ *
+ * Author: Darin Kumarnsit
+ * ID: 623040249-6
+ * Sec: 2
+ * Date: February 12, 2021
+ *
+ */
 import java.util.Scanner;
+//inherited from GuessNumberGameVer1
 public class GuessNumberGameVer2 extends GuessNumberGameVer1  {
     protected static int[] guesses;   //all num user guess
     protected static int numGuesses = 0; //round that user play
     protected static int MAX_GUESSES = 20;
     protected static int guess_input;
-    protected String ask_playagain;
+    protected String ask_playagain; //making ask_playagain accessible
 
+    //constructors to set default
     public GuessNumberGameVer2() {
+        //use super to access the superclass constructor.
         super();
         guesses = new int[MAX_GUESSES];
     }
 
+    //constructors for 2 argument
     public GuessNumberGameVer2(int minNum, int maxNum) {
+        //use super to access the superclass constructor.
         super(minNum, maxNum);
         guesses = new int[MAX_GUESSES];
     }
 
+    //constructors for 3 argument
     public GuessNumberGameVer2(int minNum, int maxNum, int maxTries) {
         super(minNum, maxNum, maxTries);
         guesses = new int[MAX_GUESSES];
